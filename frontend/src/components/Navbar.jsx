@@ -42,7 +42,7 @@ const Navbar = ({ onViewModeToggle }) => {
             </span>
             <span
               className={`slider mx-4 flex h-8 w-[60px] items-center rounded-full p-1 duration-200 ${
-                isCardView ? "bg-[#212b36]" : "bg-[#CCCCCE]"
+                isCardView ? "bg-[#2fe241]" : "bg-[#CCCCCE]"
               }`}
             >
               <span
