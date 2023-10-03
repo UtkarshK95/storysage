@@ -20,7 +20,9 @@ const EditBook = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/books/${id}`)
+      .get(
+        `https://vercel.com/utkarshk95/storysage-backend/BLAzDHtbgnZP575SBofjveHPKqFa/books/${id}`
+      )
       .then((response) => {
         setBookData(response.data);
         setLoading(false);
@@ -45,7 +47,10 @@ const EditBook = () => {
   const handleEditBook = () => {
     setLoading(true);
     axios
-      .put(`http://localhost:5555/books/${id}`, bookData)
+      .put(
+        `https://vercel.com/utkarshk95/storysage-backend/BLAzDHtbgnZP575SBofjveHPKqFa/books/${id}`,
+        bookData
+      )
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Edited successfully", { variant: "success" });

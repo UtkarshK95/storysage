@@ -28,7 +28,10 @@ const CreateBook = () => {
   const handleSaveBook = () => {
     setLoading(true);
     axios
-      .post("http://localhost:5555/books", bookData)
+      .post(
+        "https://vercel.com/utkarshk95/storysage-backend/BLAzDHtbgnZP575SBofjveHPKqFa/books",
+        bookData
+      )
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Created successfully", { variant: "success" });

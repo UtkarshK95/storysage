@@ -20,7 +20,9 @@ const Home = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:5555/books");
+        const response = await axios.get(
+          "https://vercel.com/utkarshk95/storysage-backend/BLAzDHtbgnZP575SBofjveHPKqFa/books"
+        );
         setBooks(response.data.data);
       } catch (error) {
         console.log(error);

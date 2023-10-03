@@ -9,7 +9,15 @@ const app = express();
 app.use(express.json());
 
 // Middleware for handling CORS policy
-app.use(cors());
+app.use(
+  cors({
+    allowedHeaders: ["authorization", "Content-Type"], // you can change the headers
+    exposedHeaders: ["authorization"], // you can change the headers
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+  })
+);
 
 const PORT = process.env.PORT || 5555;
 const mongoDBURL =
