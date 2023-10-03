@@ -15,9 +15,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(
-        `https://vercel.com/utkarshk95/storysage-backend/BLAzDHtbgnZP575SBofjveHPKqFa/books/${id}`
-      )
+      .delete(`https://storysage-backend-utkarshk95.vercel.app/books/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Deleted successfully", { variant: "success" });

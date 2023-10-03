@@ -21,7 +21,7 @@ const Home = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          "https://vercel.com/utkarshk95/storysage-backend/BLAzDHtbgnZP575SBofjveHPKqFa/books"
+          "https://storysage-backend-utkarshk95.vercel.app/books"
         );
         setBooks(response.data.data);
       } catch (error) {

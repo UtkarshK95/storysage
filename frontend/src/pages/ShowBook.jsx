@@ -11,9 +11,7 @@ const ShowBook = () => {
 
   useEffect(() => {
     axios
-      .get(
-        `https://vercel.com/utkarshk95/storysage-backend/BLAzDHtbgnZP575SBofjveHPKqFa/books/${id}`
-      )
+      .get(`https://storysage-backend-utkarshk95.vercel.app/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);

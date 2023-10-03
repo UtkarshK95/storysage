@@ -20,9 +20,7 @@ const EditBook = () => {
 
   useEffect(() => {
     axios
-      .get(
-        `https://vercel.com/utkarshk95/storysage-backend/BLAzDHtbgnZP575SBofjveHPKqFa/books/${id}`
-      )
+      .get(`https://storysage-backend-utkarshk95.vercel.app/books/${id}`)
       .then((response) => {
         setBookData(response.data);
         setLoading(false);
@@ -48,7 +46,7 @@ const EditBook = () => {
     setLoading(true);
     axios
       .put(
-        `https://vercel.com/utkarshk95/storysage-backend/BLAzDHtbgnZP575SBofjveHPKqFa/books/${id}`,
+        `https://storysage-backend-utkarshk95.vercel.app/books/${id}`,
         bookData
       )
       .then(() => {
