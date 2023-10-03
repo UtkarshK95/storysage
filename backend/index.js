@@ -24,6 +24,11 @@ mongoose
     app.listen(PORT, () => {
       console.log(`App is listening to ${PORT}`);
     });
+    const userWelcome = (req, res) => {
+      res.send("Welcome to Story Sage");
+    };
+
+    app.get("/", userWelcome);
   })
   .catch((error) => {
     console.log(error);
