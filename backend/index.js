@@ -1,7 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import { PORT, mongoDBURL } from "./config.js";
 import booksRoute from "./routes/booksRoute.js";
 
 const app = express();
@@ -11,6 +10,11 @@ app.use(express.json());
 
 // Middleware for handling CORS policy
 app.use(cors());
+
+const PORT = process.env.PORT || 5555;
+const mongoDBURL =
+  process.env.MONGODB_URL ||
+  "mongodb://root:root@localhost:27017/books-collection";
 
 app.use("/books", booksRoute);
 
