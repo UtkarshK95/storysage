@@ -14,8 +14,7 @@ app.use(cors());
 const PORT = process.env.PORT || 5555;
 const mongoDBURL =
   process.env.MONGODB_URL ||
-  "mongodb://root:root@localhost:27017/books-collection";
-
+  "mongodb+srv://root:root@storysage-mern.8wqzdgn.mongodb.net/books-collection?retryWrites=true&w=majority";
 app.use("/books", booksRoute);
 
 mongoose
